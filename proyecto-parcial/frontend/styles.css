@@ -1,0 +1,162 @@
+/* Reset general de estilos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    padding: 30px 20px;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #1e293b;
+    font-size: 2rem;
+}
+
+.subtitulo {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+h2 {
+    color: #334155;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* Rejilla responsive del catálogo */
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Diferenciación visual: Borde izquierdo */
+.card.libro {
+    border-left: 6px solid #2563eb; /* Azul para Libros */
+}
+
+.card.revista {
+    border-left: 6px solid #d97706; /* Naranja/Ámbar para Revistas */
+}
+
+/* Etiquetas (Badges) */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.badge-libro {
+    background-color: #2563eb;
+}
+
+.badge-revista {
+    background-color: #d97706;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 12px;
+    padding-right: 60px; /* Espacio para la etiqueta */
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+/* Estados de disponibilidad */
+.disponible {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.no-disponible {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Botón */
+.btn-prestamo {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-prestamo:hover {
+    background-color: #334155;
+}
+
+/* Caja de mensajes */
+.mensaje-box {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

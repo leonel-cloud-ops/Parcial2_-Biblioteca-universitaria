@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca Universitaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>Biblioteca Universitaria</h1>
+            <p class="subtitulo">Catálogo de Recursos y Sistema de Préstamos</p>
+        </header>
+
+        <section class="catalogo-container">
+            <h2>Catálogo Disponible</h2>
+
+            <div class="grid-catalogo">
+                
+                <div class="card libro">
+                    <span class="badge badge-libro">Libro</span>
+                    <h3>Cien Años de Soledad</h3>
+                    <p><strong>Código:</strong> LIB-001</p>
+                    <p><strong>Autor:</strong> Gabriel García Márquez</p>
+                    <p><strong>Estado:</strong> <span class="disponible">Disponible</span></p>
+                    <p><strong>Préstamo estándar:</strong> 7 días</p>
+                    <button type="button" class="btn-prestamo" onclick="solicitarPrestamo('Cien Años de Soledad', 'Libro', 7)">
+                        Solicitar Préstamo
+                    </button>
+                </div>
+
+                <div class="card libro">
+                    <span class="badge badge-libro">Libro</span>
+                    <h3>Estructuras de Datos</h3>
+                    <p><strong>Código:</strong> LIB-002</p>
+                    <p><strong>Autor:</strong> Luis Joyanes Aguilar</p>
+                    <p><strong>Estado:</strong> <span class="disponible">Disponible</span></p>
+                    <p><strong>Préstamo estándar:</strong> 7 días</p>
+                    <button type="button" class="btn-prestamo" onclick="solicitarPrestamo('Estructuras de Datos', 'Libro', 7)">
+                        Solicitar Préstamo
+                    </button>
+                </div>
+
+                <div class="card revista">
+                    <span class="badge badge-revista">Revista</span>
+                    <h3>National Geographic</h3>
+                    <p><strong>Código:</strong> REV-001</p>
+                    <p><strong>Edición:</strong> N° 245</p>
+                    <p><strong>Estado:</strong> <span class="disponible">Disponible</span></p>
+                    <p><strong>Préstamo estándar:</strong> 3 días</p>
+                    <button type="button" class="btn-prestamo" onclick="solicitarPrestamo('National Geographic', 'Revista', 3)">
+                        Solicitar Préstamo
+                    </button>
+                </div>
+
+                <div class="card revista">
+                    <span class="badge badge-revista">Revista</span>
+                    <h3>PC World Science</h3>
+                    <p><strong>Código:</strong> REV-002</p>
+                    <p><strong>Edición:</strong> N° 112</p>
+                    <p><strong>Estado:</strong> <span class="no-disponible">No disponible</span></p>
+                    <p><strong>Préstamo estándar:</strong> 3 días</p>
+                    <button type="button" class="btn-prestamo" onclick="solicitarPrestamo('PC World Science', 'Revista', 3)">
+                        Solicitar Préstamo
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="mensaje-contenedor" class="mensaje-box hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
